@@ -1,0 +1,1 @@
+angular.module('calcardAnalysis', ['ui.router', 'ngAnimate', 'toastr'])
