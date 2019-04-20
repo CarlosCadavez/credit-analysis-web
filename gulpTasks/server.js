@@ -9,7 +9,7 @@ gulp.task('watch', () => {
   watch('assets/**/*.*', () => gulp.start('app.assets'))
 })
 
-gulp.task('server', ['watch'], () => {
+gulp`.task('server', ['watch'], () => {
   return gulp.src('public').pipe(webserver({
     livereload: true,
     port: 3000,
