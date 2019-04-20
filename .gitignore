@@ -1,5 +1,3 @@
-.tmp
-.DS_Store
-.DS_Store?
-node_modules/
-.dpl/
+node_modules
+public
+*.log
