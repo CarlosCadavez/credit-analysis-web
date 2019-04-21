@@ -1,14 +1,17 @@
 <div role="form">
   <div class="box-body">
-    <div class="col-xs-12 col-sm-4">
-      <div class="form-group">
-        <label for="name">Nome</label>
-        <input id="name" class="form-control" placeholder="Informe o nome">
-      </div>
-    </div>
+    <field id="name" label="Nome" grid="12 6 4" placeholder="Informe o nome" model="cpCtrl.creditProposal.name"></field>
+    <field id="cpf" label="Cpf" grid="12 6 4" placeholder="Informe o cpf" model="cpCtrl.creditProposal.cpf"></field>
+    <field id="age" label="Idade" grid="12 6 4" placeholder="Informe a idade" type="number" model="cpCtrl.creditProposal.age"></field>
+    <field id="gender" label="Gênero" grid="12 6 4" placeholder="Informe o sexo" model="cpCtrl.creditProposal.gender"></field>
+    <field id="maritalStatus" label="Estado civil" grid="12 6 4" placeholder="Informe o estado civil" model="cpCtrl.creditProposal.maritalStatus"></field>
+    <field id="state" label="Estado" grid="12 6 4" placeholder="Informe o estado" model="cpCtrl.creditProposal.state"></field>
+    <field id="dependents" label="Dependentes" grid="12 6 4" placeholder="Informe o número de dependentes" type="number"
+      model="cpCtrl.creditProposal.numberOfDependent"></field>
+    <field id="income" label="Renda" grid="12 6 4" placeholder="Informe a renda" model="cpCtrl.creditProposal.income"></field>
   </div>
   <div class="box-footer">
-    <button class="btn btn-primary">Incluir</button>
+    <button class="btn btn-primary" ng-click="cpCtrl.create()">Incluir</button>
     <button class="btn btn-default">Cancelar</button>
   </div>
 </div>
