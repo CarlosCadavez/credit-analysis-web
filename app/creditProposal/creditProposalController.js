@@ -8,17 +8,24 @@
 
   function CreditProposalController($http, msgs) {
     const vm = this
+    const url = 'http://localhost:8080/credit-proposals'
+
+    vm.refresh = function () {
+      $http.get(url).then(function (resp) {
+        vm.creditProposals = resp.data
+        vm.creditProposal = {}
+      })
+    }
 
     vm.create = function () {
-      const url = 'http://localhost:8080/credit-proposals'
-
       $http.post(url, vm.creditProposal).then(function (response) {
-        vm.creditProposal = {}
+        vm.refresh()
         msgs.addSuccess('Operação salva com sucesso!')
       }).catch(function (resp) {
-        console.log('object :', resp);
         msgs.addError(resp.data.errors)
       })
     }
+
+    vm.refresh()
   }
 })()
