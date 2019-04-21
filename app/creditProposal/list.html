@@ -1,1 +1,30 @@
-<h1>Lista de propostas</h1>
+<div class="box-body">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Idade</th>
+        <th>Sexo</th>
+        <th>Estado civil</th>
+        <th>Estado</th>
+        <th>Dependentes</th>
+        <th>Renda R$</th>
+        <th>Resultado análise</th>
+        <th>Limite</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="creditProposal in cpCtrl.creditProposals">
+        <td>{{ creditProposal.name }}</td>
+        <td>{{ creditProposal.age }}</td>
+        <td>{{ creditProposal.gender }}</td>
+        <td>{{ creditProposal.maritalStatus }}</td>
+        <td>{{ creditProposal.state }}</td>
+        <td>{{ creditProposal.numberOfDependent }}</td>
+        <td>{{ creditProposal.income }}</td>
+        <td>Aprovado</td>
+        <td>Entre 500 - 1000</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
