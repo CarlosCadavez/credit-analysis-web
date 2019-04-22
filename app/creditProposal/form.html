@@ -3,8 +3,28 @@
     <field id="name" label="Nome" grid="12 6 4" placeholder="Informe o nome" model="cpCtrl.creditProposal.name"></field>
     <field id="cpf" label="Cpf" grid="12 6 4" placeholder="Informe o cpf" model="cpCtrl.creditProposal.cpf"></field>
     <field id="age" label="Idade" grid="12 6 4" placeholder="Informe a idade" type="number" model="cpCtrl.creditProposal.age"></field>
-    <field id="gender" label="Gênero" grid="12 6 4" placeholder="Informe o sexo" model="cpCtrl.creditProposal.gender"></field>
-    <field id="maritalStatus" label="Estado civil" grid="12 6 4" placeholder="Informe o estado civil" model="cpCtrl.creditProposal.maritalStatus"></field>
+    <!-- <field id="gender" label="Gênero" grid="12 6 4" placeholder="Informe o sexo" model="cpCtrl.creditProposal.gender"></field> -->
+    <div class="form-group">
+      <label>Sexo</label>
+      <select class="form-control" ng-model="cpCtrl.creditProposal.gender">
+        <option value="">-- Selecione --</option>
+        <option value="FEMALE">Feminino</option>
+        <option value="MALE">Masculino</option>
+      </select>
+    </div>
+
+    <!-- <field id="maritalStatus" label="Estado civil" grid="12 6 4" placeholder="Informe o estado civil" model="cpCtrl.creditProposal.maritalStatus"></field> -->
+    <div class="form-group">
+      <label>Estado civil</label>
+      <select class="form-control" ng-model="cpCtrl.creditProposal.maritalStatus">
+        <option value="">-- Selecione --</option>
+        <option value="MARRIED">Casada(o)</option>
+        <option value="SINGLE">Solteira(o)</option>
+        <option value="DIVORCED">Divorciada(o)</option>
+        <option value="WIDOWED">Viúva(o)</option>
+      </select>
+    </div>
+
     <field id="state" label="Estado" grid="12 6 4" placeholder="Informe o estado" model="cpCtrl.creditProposal.state"></field>
     <field id="dependents" label="Dependentes" grid="12 6 4" placeholder="Informe o número de dependentes" type="number"
       model="cpCtrl.creditProposal.numberOfDependent"></field>
